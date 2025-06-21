@@ -1,0 +1,17 @@
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\tests\BaseTest.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\utils\HtmlLogManager.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\crud\AbstractCrudService.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\service\BookService.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\client\RestClient.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\dto\Book.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\data\BookFactory.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\service\AuthorService.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\utils\LogManager.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\tests\BookNegativeTest.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\tests\BookHappyPathTest.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\dto\Author.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\data\AuthorFactory.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\extentReport\CustomHtmlLoggerExtension.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\crud\CrudEndpoint.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\tests\BookEdgeCaseTest.java
+C:\Users\DELL\IdeaProjects\api-bookstore-tests\src\test\java\config\ConfigManager.java

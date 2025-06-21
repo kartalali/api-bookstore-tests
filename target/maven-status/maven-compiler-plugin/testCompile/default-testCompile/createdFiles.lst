@@ -1,0 +1,17 @@
+data\AuthorFactory.class
+dto\Book.class
+tests\BookEdgeCaseTest.class
+crud\AbstractCrudService.class
+crud\CrudEndpoint.class
+service\BookService.class
+service\AuthorService.class
+tests\BaseTest.class
+extentReport\CustomHtmlLoggerExtension.class
+utils\HtmlLogManager.class
+data\BookFactory.class
+utils\LogManager.class
+tests\BookHappyPathTest.class
+config\ConfigManager.class
+dto\Author.class
+client\RestClient.class
+tests\BookNegativeTest.class
