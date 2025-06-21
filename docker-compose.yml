@@ -1,14 +1,14 @@
-version: "3.8"
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    build: .
     container_name: jenkins
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
-      - ./jenkins.yaml:/var/jenkins_home/casc.yaml
+      - ./casc.yaml:/var/jenkins_home/casc.yaml
+      - ./plugins:/var/jenkins_home/plugins
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc.yaml
     restart: always
