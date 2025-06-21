@@ -8,6 +8,9 @@ services:
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
+      - ./jenkins.yaml:/var/jenkins_home/casc.yaml
+    environment:
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc.yaml
     restart: always
 
 volumes:
