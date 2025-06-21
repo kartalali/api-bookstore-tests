@@ -1,2 +1,8 @@
 FROM jenkins/jenkins:lts
-COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+
+RUN jenkins-plugin-cli --plugins \
+  configuration-as-code \
+  git \
+  workflow-aggregator
