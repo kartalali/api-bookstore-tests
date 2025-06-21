@@ -1,9 +1,12 @@
 FROM jenkins/jenkins:lts
 
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
-
+USER root
+RUN apt-get update && apt-get install -y maven git
 RUN jenkins-plugin-cli --plugins \
   configuration-as-code \
-  git \
   workflow-aggregator \
-  job-dsl
+  job-dsl \
+  junit
+
+USER jenkins
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
