@@ -12,17 +12,43 @@ jenkins:
 
 jobs:
   - script: >
-      pipelineJob('bookstore-pipeline') {
+      pipelineJob('book-happy-path-tests') {
         definition {
           cpsScm {
             scm {
               git {
-                remote {
-                  url('https://github.com/kartalali/api-bookstore-tests.git')
-                }
+                remote { url('https://github.com/kartalali/api-bookstore-tests.git') }
                 branches('*/main')
               }
-              scriptPath('Jenkinsfile')
+              scriptPath('Jenkinsfile-happy')
+            }
+          }
+        }
+      }
+  - script: >
+      pipelineJob('book-negative-tests') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote { url('https://github.com/kartalali/api-bookstore-tests.git') }
+                branches('*/main')
+              }
+              scriptPath('Jenkinsfile-negative')
+            }
+          }
+        }
+      }
+  - script: >
+      pipelineJob('book-edge-case-tests') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote { url('https://github.com/kartalali/api-bookstore-tests.git') }
+                branches('*/main')
+              }
+              scriptPath('Jenkinsfile-edge')
             }
           }
         }

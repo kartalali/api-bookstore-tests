@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run BookHappyPathTest') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh 'mvn clean test -Dtest=BookHappyPathTest'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'src/test/html_logs/**/*', allowEmptyArchive: true
+            junit '**/target/surefire-reports/*.xml'
+        }
+    }
+}

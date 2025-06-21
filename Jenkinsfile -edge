@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run BookEdgeCaseTest') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh 'mvn clean test -Dtest=BookEdgeCaseTest'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'src/test/html_logs/**/*', allowEmptyArchive: true
+            junit '**/target/surefire-reports/*.xml'
+        }
+    }
+}
